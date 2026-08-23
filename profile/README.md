@@ -15,3 +15,6 @@
 **口径宪章**：不承诺排名第一 · 不承诺被所有 AI 推荐 · 不承诺统一见效天数；只承诺诊断分数 · 改进清单 · 复测对比。违背者的 PR 直接关闭。
 
 📖 在线教程：https://cangqiaogeo.github.io/OpenGEO/course/ ｜ 发起方：杭州仓桥智能科技
+
+
+> **建设顺序（2026-08-23 决议）**：第一批 L0 opengeo-spec / L1 opengeo-audit / L3 opengeo-skills；第二批 L2 / L4 / L5。治理与 RFC 流程见 [OpenGEO/GOVERNANCE.md](https://github.com/cangqiaoGEO/OpenGEO/blob/main/GOVERNANCE.md)。
