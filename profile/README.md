@@ -18,3 +18,6 @@
 
 
 > **建设顺序（2026-08-23 决议）**：第一批 L0 opengeo-spec / L1 opengeo-audit / L3 opengeo-skills；第二批 L2 / L4 / L5。治理与 RFC 流程见 [OpenGEO/GOVERNANCE.md](https://github.com/cangqiaoGEO/OpenGEO/blob/main/GOVERNANCE.md)。
+
+
+**行业基准对外名称**：OpenGEO Index（OpenGEO 可见度指数）。
