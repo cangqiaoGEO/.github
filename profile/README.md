@@ -4,14 +4,36 @@
 
 ### 一套架构：法只写一遍，两个 runtime，一个遥测库
 
+```mermaid
+flowchart TB
+    subgraph LAW["📜 法 · 唯一书写真相（git markdown）"]
+        SPEC["<b>opengeo-spec</b><br/>OKF 规范 · 指标宪章 · 行业 Playbook"]
+        BUNDLE["<b>品牌 bundle</b>（每客户一个私有仓）<br/>事实库 · 意图词 · 内容 · 报告"]
+    end
+
+    PLATFORM["⚙️ <b>器A · opengeo-platform</b><br/>自动化证据机器<br/>多引擎测评 · SoV · 引用池 · 归因闭环"]
+    SKILLS["🤝 <b>器B · opengeo-skills</b><br/>Agent 人机 runtime（WorkBuddy / Claude Code）<br/>无 API 引擎采集 · 创作 · IM 审批"]
+    READY["🛠️ <b>术 · opengeo-agentready</b><br/>llms.txt · JSON-LD · 官网 AI 可读清单"]
+    INDEX["🧭 <b>道 · opengeo-index</b><br/>行业 × 城市 × 引擎 公开可见度基准"]
+
+    SPEC -. 同一份口径 .-> PLATFORM
+    SPEC -. 同一份口径 .-> SKILLS
+    BUNDLE ==>|"① git 写入 → 导入"| PLATFORM
+    BUNDLE -->|"项目 = 文件夹"| SKILLS
+    SKILLS -->|"② 采集/内容回流"| BUNDLE
+    PLATFORM ==>|"③ 判决/报告写回 markdown"| BUNDLE
+    PLATFORM -->|"匿名聚合"| INDEX
+    READY -->|"站点整改清单"| BUNDLE
+
+    classDef law fill:#fdf3e3,stroke:#b98a2f,color:#3b2f13
+    classDef qi fill:#e8eef7,stroke:#2c4a6e,color:#16233a
+    classDef pub fill:#e9f2ea,stroke:#3d6b4f,color:#1c2f22
+    class SPEC,BUNDLE law
+    class PLATFORM,SKILLS qi
+    class READY,INDEX pub
 ```
-法（git markdown，唯一书写真相）── opengeo-spec + 品牌 bundle
-   ↓ 导入                    ↓ 项目=文件夹
-器A opengeo-platform      器B opengeo-skills（WorkBuddy / Claude Code）
-自动化：runs·SoV·引用·归因   人机：采集·创作·IM 审批 ──→ 回流 platform
-   ↓ 判决/报告以 markdown 写回 bundle（单向环流，无双向同步）
-道 opengeo-index 公开基准 ＋ 术 opengeo-agentready 站点层
-```
+
+**单向环流**：① 知识只在 git 里写 → ② platform 导入计算（遥测只在数据库里算）→ ③ 判决以 markdown 写回 bundle。每个存储只对自己的领域有写权——没有双向同步，因此没有冲突。
 
 | 角色 | 仓库 | 一句话 |
 | --- | --- | --- |
